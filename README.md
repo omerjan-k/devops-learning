@@ -12,3 +12,9 @@ Me
 
 ## Date
 $(date)
+
+## Scripts
+- backup.sh - Automated backup
+
+## Status
+Last updated: $(date)
