@@ -1,3 +1,2 @@
-Main code
-More code
-FIXED
+# Main application
+print("App started")
