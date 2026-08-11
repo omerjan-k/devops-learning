@@ -1,0 +1,2 @@
+Alert: Email
+Alert: Slack
