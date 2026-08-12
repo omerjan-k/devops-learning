@@ -1,0 +1,26 @@
+name: Run Tests
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Check Bash scripts
+      run: bash -n scripts/*.sh
+      
+    - name: Verify files exist
+      run: |
+        test -f README.md && echo "✓ README exists"
+        test -d scripts && echo "✓ Scripts folder exists"
+        test -d configs && echo "✓ Configs folder exists"
+        
+    - name: Show commits
+      run: git log --oneline -5
